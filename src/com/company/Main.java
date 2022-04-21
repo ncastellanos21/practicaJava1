@@ -29,7 +29,8 @@ public class Main {
         System.out.println(dades);
 
         ProfessorSubstitut ps = new ProfessorSubstitut();
-        ps.assignarSubstitucio("12/12/22", "12/12/23");
+        ps.assignarSubstitucio("12/12/22",
+                "12/12/23");
         ps.canviarNom("Luis");
         ps.canviarSou(1100);
         dades = ps.obtenirDades();
