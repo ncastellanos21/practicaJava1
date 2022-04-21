@@ -23,16 +23,16 @@ public class Main {
         System.out.println(dades);
 
         Professor pr = new Professor();
-        pr.canviarSou(1500);
+        pr.canviarSou(2500);
         pr.canviarNom("Pere");
         dades = pr.obtenirDades();
         System.out.println(dades);
 
         ProfessorSubstitut ps = new ProfessorSubstitut();
-        ps.assignarSubstitucio("12/12/22",
-                "12/12/23");
+        ps.assignarSubstitucio("2022/12/22",
+                "2023/12/23");
         ps.canviarNom("Luis");
-        ps.canviarSou(1100);
+        ps.canviarSou(1500);
         dades = ps.obtenirDades();
         System.out.println(dades);
     }
