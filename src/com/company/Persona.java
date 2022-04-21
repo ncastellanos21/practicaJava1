@@ -3,7 +3,7 @@ package com.company;
 public class Persona {
     //Atributs (sempre privats)
     private String nom;
-    private String dni;
+    private int dni;
 
     //funcions (poden ser publiques o privades)
     public Persona() {
@@ -15,12 +15,12 @@ public class Persona {
         this.nom = nom;
     }
 
-    public void assignarDni(String dni) {
+    public void assignarDni(int dni) {
         this.dni = dni;
     }
 
     public String obtenirDades() {
         return "Persona que es diu " + this.nom
-                + "con dni " + this.dni;
+                + " con dni " + this.dni;
     }
 }
