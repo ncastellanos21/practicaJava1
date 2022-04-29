@@ -1,50 +1,32 @@
 package com.company;
 
+import java.util.Date;
+
 public class Main {
+    public static void main(String[] args) throws Exception {
+        Institut ins = new Institut();
+        ins.InsName("La Guineueta");
 
-    public static void main(String[] args) {
-	// write your code here
-        Persona p1 = new Persona(); //instacia de persona
-        Estudiant e1 = new Estudiant();
-        Institut i1 = new Institut();
-
-        p1.canviarNom("Naomy");
-        String dades = p1.obtenirDades();
-        System.out.println(dades);
-
-        p1.canviarNom("Nelly");
-        dades = p1.obtenirDades();
-        System.out.println(dades);
-
-        i1.nomIES("Santa CLara");
-        Professor profe = new Professor();
-        i1.afegirProfe(profe);
-        Estudiant estudiant = new Estudiant();
-        i1.afegirEstudiant(estudiant);
-        String imprimir = i1.imprimirInformacio();
-        System.out.println(imprimir);
-        
-        Estudiant e = new Estudiant();
-        e.posarNota(7.5);
-        e.canviarNom("Lara");
-        e.assignarDni(123456);
-        dades = e.obtenirDades();
-        System.out.println(dades);
-
-        Professor pr = new Professor();
-        pr.canviarSou(2500);
-        pr.canviarNom("Pere");
-        pr.assignarDni(235323);
-        dades = pr.obtenirDades();
-        System.out.println(dades);
+        Professor p1 = new Professor();
+        p1.canviarSou(1.532);
+        p1.canviarNom("Marc");
+        p1.assignarDni("123445F");
+        ins.afegirProfe(p1);
 
         ProfessorSubstitut ps = new ProfessorSubstitut();
+        ps.canviarNom("Laura");
+        ps.canviarSou(1.222);
+        ps.assignarDni("43545245Y");
         ps.assignarSubstitucio("2022/12/22",
                 "2023/12/23");
-        ps.assignarDni(293463);
-        ps.canviarNom("Luis");
-        ps.canviarSou(1500);
-        dades = ps.obtenirDades();
-        System.out.println(dades);
+        ins.afegirProfe(ps);
+
+        Estudiant e= new Estudiant();
+        e.canviarNom("Joan");
+        e.assignarDni("131231A");
+        e.posarNota(7.5);
+        ins.afegirEstudiant(e);
+
+        ins.imprimirInformacio();
     }
 }
