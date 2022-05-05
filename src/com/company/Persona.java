@@ -15,12 +15,32 @@ public class Persona {
         this.nom = nom;
     }
 
-    public void assignarDni(String dni) {
-        this.dni = dni;
+    public void assignarDni(String dni) throws Exception {
+
+        if(this.dni==null){
+            this.dni = dni;
+        } else {
+            throw new Exception("EL DNI ES OBLIGATORI!");
+        }
+
+        if(dni!=null){
+            this.dni = dni;
+        } else {
+            throw new Exception("EL DNI ES OBLIGATORI!");
+        }
+
+
     }
 
-    public String obtenirDades() {
-        return "Persona que es diu " + this.nom
-                + " con dni " + this.dni;
+    public String obtenirDades() throws Exception {
+
+        if(this.dni==null || this.nom==null){
+            throw new Exception("NO PUEDES ACCEDER A SUS DATOS PORQUE NO TIENE DNI O NO TIENE NOMBRE.");
+        } else {
+            return "- " + this.nom
+                    + " con dni " + this.dni;
+        }
+
     }
+
 }

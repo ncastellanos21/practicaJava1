@@ -20,7 +20,7 @@ public class Institut {
         this.personas.add(estudiant);
     }
     public void imprimirInformacio() throws  Exception {
-        System.out.println(" El Institut es: " + this.name);
+        System.out.println(" El Institut " + this.name);
         for (Persona p : personas) {
             System.out.println(p.obtenirDades());
         }
