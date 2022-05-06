@@ -12,13 +12,18 @@ public class Institut {
     public void InsName(String nom1) {
         this.name = name;
     }
-    public void afegirProfe(Professor profe ){
-        this.personas.add(profe);
 
+    public void afegirPersona(Persona person ){
+        this.personas.add(person);
     }
-    public void afegirEstudiant(Estudiant estudiant){
+
+    /*public void afegirProfe(Professor profe ){
+        this.personas.add(profe);
+    }*/
+    /*public void afegirEstudiant(Estudiant estudiant){
         this.personas.add(estudiant);
-    }
+    }*/
+
     public void imprimirInformacio() throws  Exception {
         System.out.println(" El Institut " + this.name);
         for (Persona p : personas) {

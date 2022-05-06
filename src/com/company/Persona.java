@@ -20,7 +20,7 @@ public class Persona {
         if(this.dni==null){
             this.dni = dni;
         } else {
-            throw new Exception("EL DNI ES OBLIGATORI!");
+            throw new Exception("NO PUEDES CAMBIAR EL DNI.");
         }
 
         if(dni!=null){
