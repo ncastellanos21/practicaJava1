@@ -24,15 +24,33 @@ public class Main {
         ps.assignarSubstitucio(dataInici, dataFi);
         ins.afegirPersona(ps);
 
-        Estudiant e= new Estudiant();
-        e.canviarNom("Joan");
-        e.assignarDni("12345621A"); //Comentar para probar la funcion de DNI obligatori
-        e.posarNota(7.5);
-        e.posarNota(4.7);
-        e.posarNota(9.2);
-        e.posarNota(6.3);
-        ins.afegirPersona(e);
+        Estudiant e1= new Estudiant();
+        e1.canviarNom("Joan");
+        e1.assignarDni("12345621A"); //Comentar para probar la funcion de DNI obligatori
+        e1.posarNota(9.8);
+        e1.posarNota(8.55);
+        e1.posarNota(5.65);
+        e1.posarNota(6.85);
+        e1.posarNota(9.65);
+        e1.posarNota(9.45);
+        e1.posarNota(5.0);
+        e1.posarNota(2.8);
+        e1.posarNota(3.95);
+        ins.afegirPersona(e1);
 
+        Estudiant e2 = new Estudiant();
+        e2.canviarNom("Maria");
+        e2.assignarDni("34345621B"); //Comentar para probar la funcion de DNI obligatori
+        e2.posarNota(9.8);
+        e2.posarNota(8.55);
+        e2.posarNota(8.65);
+        e2.posarNota(9.85);
+        e2.posarNota(9.65);
+        e2.posarNota(9.45);
+        e2.posarNota(8.0);
+        e2.posarNota(7.8);
+        e2.posarNota(8.95);
+        ins.afegirPersona(e2);
         ins.imprimirInformacio();
     }
 }

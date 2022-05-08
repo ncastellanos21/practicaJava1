@@ -8,7 +8,6 @@ public class Estudiant extends Persona{
 
         List<Double> notas = new ArrayList<>();
         private double nota;
-        private double media;
         public Estudiant() {}
 
         public void posarNota(double nota) throws Exception {
@@ -18,19 +17,49 @@ public class Estudiant extends Persona{
                 } else {
                         throw new Exception("LA NOTA NO POT SER NEGATIVA NI SUPERIOR A 10.");
                 }
-
-                for (int i=0; i<this.notas.size(); i++) {
-                        media = media + this.notas.get(i);
-                }
-
-                media = media / this.notas.size();
-
-
         }
 
         public String obtenirDades() throws Exception {
+                double min = 0;
+                double max = 0;
+                double suma = 0;
+                double media = 0;
+                String felicitacion = "";
+
+                for(int i=0; i<notas.size();i++){
+                        suma = suma + notas.get(i);
+                        media = suma/notas.size();
+                        if(media>8.5) felicitacion = "   - ERES UN/A CRACK! :D-";
+                        else if(media>5 && media<=7) felicitacion = "   - BIEN! Has aprobado-";
+                        else if(media>7) felicitacion = "   - Lo has hecho excelente! :)-";
+                        else felicitacion = "   - Nos vemos en junio :( -";
+
+                        if(min==0 && max==0){
+                                min = notas.get(i);
+                                max = notas.get(i);
+                        }
+                        if(max< notas.get(i)) max = notas.get(i);
+                        if(min>notas.get(i)) min = notas.get(i);
+                }
+
+                /*for(double valor : notas){
+                        suma = suma + valor;
+                        media = suma/notas.size();
+
+                        if(min==0 && max==0){
+                                min=valor;
+                                max=valor;
+                        }
+                        if(max < valor) max = valor;
+                        if(min > valor) min = valor;
+
+                }*/
+
         //Vull que em digui el mateix que persona + la nota
-                return super.obtenirDades() + " [Alumne que te una nota de:  " + this.notas + media +"]";
+                return super.obtenirDades() + " [Alumne que te aquestes notes:  "
+                        + this.notas + "\n" + "  MEDIA: " + String.format("%.2f", media) +"   MIN: " +
+                        String.format("%.2f", min) + "   MAX: " + String.format("%.2f", max) +  "]"
+                        + " Tienes una nota final de: " + + Math.round(media) + felicitacion;
         }
 
         }

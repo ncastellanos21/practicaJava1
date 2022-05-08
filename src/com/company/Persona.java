@@ -35,7 +35,8 @@ public class Persona {
     public String obtenirDades() throws Exception {
 
         if(this.dni==null || this.nom==null){
-            throw new Exception("NO PUEDES ACCEDER A SUS DATOS PORQUE NO TIENE DNI O NO TIENE NOMBRE.");
+            throw new Exception("NO PUEDES ACCEDER A SUS DATOS PORQUE NO " +
+                    "TIENE DNI O NO TIENE NOMBRE.");
         } else {
             return "- " + this.nom
                     + " con dni " + this.dni;
